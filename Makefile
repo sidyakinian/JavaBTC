@@ -6,7 +6,7 @@ LIBS_DIR=libs
 LIBS=$(shell find $(LIBS_DIR) -name '*.jar' | tr '\n' ':')
 MAIN_CLASS=src.main.Main
 
-all: compile
+all: compile test
 
 compile:
 	mkdir -p $(BUILD_DIR)/main
