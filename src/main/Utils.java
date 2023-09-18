@@ -1,4 +1,5 @@
 package src.main;
+import java.math.BigInteger;
 import java.util.Formatter;
 
 public class Utils {
@@ -9,5 +10,9 @@ public class Utils {
             }
             return formatter.toString();
         }
+    }
+
+    public static boolean lessThan(BigInteger a, BigInteger b) {
+        return a.compareTo(b) < 0;
     }
 }
