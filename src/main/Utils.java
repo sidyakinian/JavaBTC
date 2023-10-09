@@ -40,4 +40,9 @@ public class Utils {
 
         return new EuclidianResult(oldR, oldS, oldT);
     }
+
+    public static BigInteger inv(BigInteger n, BigInteger p) {
+        EuclidianResult result = extendedEuclideanAlgorithm(n, p);
+        return result.r().mod(p);
+    }
 }
