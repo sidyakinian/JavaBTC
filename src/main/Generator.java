@@ -1,8 +1,10 @@
 package src.main;
 
-public record Generator(Point g, int n) {
+import java.math.BigInteger;
+
+public record Generator(Point g, BigInteger n) {
     static public final Generator bitcoinGenerator = new Generator(
         Point.bitcoinPoint,
-        Integer.parseInt("0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141", 16)
+        new BigInteger("0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141", 16)
     );
 }
